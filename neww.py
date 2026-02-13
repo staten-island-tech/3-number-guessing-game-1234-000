@@ -3,17 +3,17 @@ number = ["1","2","3","4","5","6","7","8","9","10"]
 guess = random.choice(number)
 
 
-incorrect = []
+Guess_history = []
 
 
 user1 = ""
 while user1 != int(guess):
     user1 = int(input("Guess the Number:"))
-    incorrect.append(user1)
+    Guess_history.append(user1)
     if user1 == int(guess):
         print("The Number is", guess)
-        for incorrect in incorrect:
-            print(incorrect)
+        for Guess_history in Guess_history:
+            print("Your Wrong Guesses",Guess_history)
     else: 
         print("Wrong")
         if int(guess) > int(5):
